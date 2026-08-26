@@ -1,0 +1,6 @@
+git add .
+
+git remote add origin <https://github.com/Rxjaz/algorithm-analysis>
+git commit -m "Mi primer commit" //error//
+git config user.mail "<ariel.rxj@gmail.com>"
+git push --set-upstream origin master //login with browser//
