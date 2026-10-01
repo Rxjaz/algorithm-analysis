@@ -1,0 +1,13 @@
+Definimos f(-1) = 0 y f(0) = 0 para las posiciones anteriores a la primera moneda
+Definimos r = [] una lista vacía para los resultados
+
+Se recibe la lista de monedas
+
+Para cada moneda n, se calcula el máximo entre (el valor de la moneda actual (Cn) + el resultado de la misma función dos posiciones anteriores (n - 2)) y (el resultado de la misma función una posición anterior (n - 1)) para saber cuál es mayor. Ese valor se guarda como f(n) en una tabla, para no volver a calcularlo
+
+Al terminar, se obtiene la lista de monedas elegidas recorriendo hacia atrás
+
+Si (Cn + f(n - 2)) es mayor que f(n - 1), significa que se tomó la moneda actual. Se marca, se guarda en r y se salta a la posición n - 2, porque la moneda vecina no se puede tomar.
+Si no, la moneda actual no se tomó y se pasa a la posición n - 1
+
+Se repite hasta que n sea menor que 1, se invierte r y se muestra
