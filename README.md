@@ -29,7 +29,7 @@ All the work lives in **`Activities/`**, one folder per activity, from Python ba
     │   ├── main.py                   # Reads results.json and plots the times
     │   └── sorts/                    # One file per sorting algorithm
     ├── 05_coin_problem/
-    │   ├── pseudocode_coin.txt    # Coin problem pseudocode
+    │   ├── pseudocode_coin.txt       # Coin problem pseudocode
     │   └── coin.py                   # Coin problem implementation
     └── 06_fibonacci_dp/
         └── fibonacci.py              # Recursive vs DP Fibonacci (GUI + plot)
