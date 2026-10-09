@@ -28,6 +28,8 @@ All the work lives in **`Activities/`**, one folder per activity, from Python ba
     │   ├── benchmark.py              # Generates inputs, times each sort, saves results.json
     │   ├── main.py                   # Reads results.json and plots the times
     │   └── sorts/                    # One file per sorting algorithm
+    ├── 04_tsne/
+    │   └── mnist.ipynb               # t-SNE on MNIST + KMeans/DBSCAN clustering of the 7s
     ├── 05_coin_problem/
     │   ├── pseudocode_coin.txt       # Coin problem pseudocode
     │   └── coin.py                   # Coin problem implementation
@@ -49,12 +51,17 @@ Each algorithm, with the file where it is implemented and its time complexity:
 | Stooge Sort | `03_brute_force/sorts/stooge_sort_rec.py` | O(n^2.71) | Recursively sorts the first 2/3, the last 2/3 and the first 2/3 again. |
 | Fibonacci (recursive) | `06_fibonacci_dp/fibonacci.py` | O(2ⁿ) | Naive recursion; recomputes the same subproblems. |
 | Fibonacci (DP) | `06_fibonacci_dp/fibonacci.py` | O(n) | Bottom-up table; each value is computed only once. |
+| PCA | `04_tsne/mnist.ipynb` | O(n·d²) | Reduces the 784 pixels to 50 components (~82% of the variance) before t-SNE. |
+| t-SNE (Barnes-Hut) | `04_tsne/mnist.ipynb` | O(n log n) | Embeds the 60,000 MNIST images in 2D; similar digits form clusters. |
+| KMeans | `04_tsne/mnist.ipynb` | O(n·k·i) | Splits the t-SNE map of the 7s into `k = 4` groups and shows the mean image of each. |
+| DBSCAN | `04_tsne/mnist.ipynb` | O(n log n) | Density-based clustering of the 7s; sweeps `eps` and marks outliers as noise. |
 | Coin problem | `05_coin_problem/` | O(n) | DP: `f(n) = max(Cₙ + f(n−2), f(n−1))`, then backtracks to get the chosen coins. |
 
 ## Tools
 
 - **Language:** Python 3
-- **Libraries:** Matplotlib (plots), Tkinter (GUIs)
+- **Libraries:** Matplotlib (plots), Tkinter (GUIs), NumPy, pandas, scikit-learn and kagglehub (t-SNE activity)
+- **Notebooks:** Jupyter (`04_tsne`)
 
 ## Author
 
