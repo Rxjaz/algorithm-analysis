@@ -1,8 +1,10 @@
 Algorithm Analysis Notes/
 the_big_o's/
 __pycache__/
+.venv/
 
 results.json
 
 *.pdf
 *.png
+*.npy
